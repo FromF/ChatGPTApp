@@ -23,5 +23,8 @@ extension ChatGptMessageItem {
 }
 
 extension ChatGptMessageItem : Identifiable {
-
+    public var isUser: Bool {
+        let role = ChatGptRole(rawValue: role ?? "") ?? .own
+        return role == .own
+    }
 }

@@ -28,7 +28,9 @@ struct ChatView: View {
                             if let timeStamp = item.timestamp {
                                 VStack {
                                     Text(timeStamp, style: .date)
+                                        .font(.caption)
                                     Text(timeStamp, style: .time)
+                                        .font(.caption)
                                 }
                             }
                             if let message = item.message {

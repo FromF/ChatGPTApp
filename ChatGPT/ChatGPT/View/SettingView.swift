@@ -26,10 +26,10 @@ struct SettingView: View {
             
             HStack {
                 if isShow {
-                    TextField("Chat GPTのAPIキーを入力してください", text: $apiKey)
+                    TextField("OpenAIのAPIキーを入力してください", text: $apiKey)
                         .textFieldStyle(RoundedBorderTextFieldStyle())
                 } else {
-                    SecureField("Chat GPTのAPIキーを入力してください", text: $apiKey)
+                    SecureField("OpenAIのAPIキーを入力してください", text: $apiKey)
                         .textFieldStyle(RoundedBorderTextFieldStyle())
                 }
                 Button {

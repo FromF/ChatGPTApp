@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum Role: String {
+enum ChatGptRole: String {
     case own = "user"
     case ai = "assistant"
 }

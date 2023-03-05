@@ -24,7 +24,7 @@
 		9D47226D29B47489005BD7E1 /* ChatGptMessageItem+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D47226B29B47489005BD7E1 /* ChatGptMessageItem+CoreDataClass.swift */; };
 		9D47226E29B47489005BD7E1 /* ChatGptMessageItem+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D47226C29B47489005BD7E1 /* ChatGptMessageItem+CoreDataProperties.swift */; };
 		9D47227029B47590005BD7E1 /* ChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D47226F29B47590005BD7E1 /* ChatViewModel.swift */; };
-		9D47227229B4850D005BD7E1 /* Role.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D47227129B4850D005BD7E1 /* Role.swift */; };
+		9D47227229B4850D005BD7E1 /* ChatGptRole.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D47227129B4850D005BD7E1 /* ChatGptRole.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,7 +46,7 @@
 		9D47226B29B47489005BD7E1 /* ChatGptMessageItem+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ChatGptMessageItem+CoreDataClass.swift"; sourceTree = "<group>"; };
 		9D47226C29B47489005BD7E1 /* ChatGptMessageItem+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ChatGptMessageItem+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		9D47226F29B47590005BD7E1 /* ChatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewModel.swift; sourceTree = "<group>"; };
-		9D47227129B4850D005BD7E1 /* Role.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Role.swift; sourceTree = "<group>"; };
+		9D47227129B4850D005BD7E1 /* ChatGptRole.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatGptRole.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,7 +127,7 @@
 				9D47226429B46E00005BD7E1 /* ChatGPTRequestParameter.swift */,
 				9D47226629B471A1005BD7E1 /* ChatGPTResponse.swift */,
 				9D47226029B46BEC005BD7E1 /* ChatGPTController.swift */,
-				9D47227129B4850D005BD7E1 /* Role.swift */,
+				9D47227129B4850D005BD7E1 /* ChatGptRole.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -213,7 +213,7 @@
 			files = (
 				9D47225629B4678F005BD7E1 /* ChatTabView.swift in Sources */,
 				9D47225F29B46B84005BD7E1 /* keys.swift in Sources */,
-				9D47227229B4850D005BD7E1 /* Role.swift in Sources */,
+				9D47227229B4850D005BD7E1 /* ChatGptRole.swift in Sources */,
 				9D47224C29B46765005BD7E1 /* Persistence.swift in Sources */,
 				9D47226129B46BEC005BD7E1 /* ChatGPTController.swift in Sources */,
 				9D47226D29B47489005BD7E1 /* ChatGptMessageItem+CoreDataClass.swift in Sources */,

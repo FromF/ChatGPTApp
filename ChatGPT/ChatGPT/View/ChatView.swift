@@ -33,6 +33,9 @@ struct ChatView: View {
                                         .font(.caption)
                                 }
                             }
+                            if let role = item.role {
+                                Image(systemName: role == "user" ? "person" : "brain")
+                            }
                             if let message = item.message {
                                 Text(message)
                             }

@@ -15,7 +15,7 @@ struct ChatGPTMessage: Codable {
         self.content = content
     }
     
-    init(role: Role, content: String) {
+    init(role: ChatGptRole, content: String) {
         self.role = role.rawValue
         self.content = content
     }

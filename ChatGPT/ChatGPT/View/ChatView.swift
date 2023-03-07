@@ -22,8 +22,7 @@ struct ChatView: View {
         VStack {
             ScrollViewReader { _ in
                 List {
-                    ForEach(0 ..< items.count, id: \.self) { index in
-                        let item = items[index]
+                    ForEach(items) { item in
                         HStack {
                             if let timeStamp = item.timestamp {
                                 VStack {
@@ -38,7 +37,6 @@ struct ChatView: View {
                                 Text(message)
                             }
                         }
-                        .id(index)
                     }
                 }
                 

@@ -64,7 +64,7 @@ class ChatGPTController: NSObject {
                 }
                 return response
 
-            case 400... :
+            case 400...:
                 throw APIClientError.badStatus(statusCode: httpStatus.statusCode)
 
             default:

@@ -11,17 +11,17 @@ import CoreData
 class ChatViewModel: ObservableObject {
     @Published var errorMessage = ""
     private let chatGPTController = ChatGPTController()
+    private let coreDataController = CoreDataController()
     private let viewContext = PersistenceController.shared.container.viewContext
-
     
     func send(_ message: String) async {
         do {
-            var messages: [ChatGPTMessage] = try fetchPreviousMessages()
+            var messages: [ChatGPTMessage] = try coreDataController.fetchPreviousMessages()
             
             let newMessage = ChatGPTMessage(role: .own, content: message)
             messages.append(newMessage)
             
-            try insertMessageIntoCoreData(role: "user", message: message)
+            try coreDataController.insertMessageIntoCoreData(role: "user", message: message)
             let result = try await chatGPTController.send(messages)
             let sortedResult = result.choices.sorted { lhs, rhs in
                 return lhs.index < rhs.index
@@ -29,7 +29,7 @@ class ChatViewModel: ObservableObject {
             
             if let resposeMessage = sortedResult.last?.message.content,
                let resposeRole = sortedResult.last?.message.role {
-                try insertMessageIntoCoreData(role: resposeRole, message: resposeMessage)
+                try coreDataController.insertMessageIntoCoreData(role: resposeRole, message: resposeMessage)
             }
             
             if errorMessage.isEmpty == false {
@@ -39,31 +39,5 @@ class ChatViewModel: ObservableObject {
             errorLog(error)
             errorMessage = error.localizedDescription
         }
-    }
-    
-    private func fetchPreviousMessages() throws -> [ChatGPTMessage] {
-        var messages: [ChatGPTMessage] = []
-        
-        let request = NSFetchRequest<ChatGptMessageItem>(entityName: "ChatGptMessageItem")
-        request.sortDescriptors = [NSSortDescriptor(keyPath: \ChatGptMessageItem.timestamp, ascending: true)]
-        let chatGptMessageItems = try viewContext.fetch(request)
-        
-        for item in chatGptMessageItems {
-            if let role = item.role,
-               let message = item.message {
-                messages.append(ChatGPTMessage(role: role, content: message))
-            }
-        }
-        
-        return messages
-    }
-    
-    private func insertMessageIntoCoreData(role: String, message: String) throws {
-        let newItem = ChatGptMessageItem(context: viewContext)
-        newItem.timestamp = Date()
-        newItem.role = role
-        newItem.message = message
-        
-        try viewContext.save()
     }
 }

@@ -22,7 +22,6 @@ struct ChatGPTResponse: Codable {
         }
     }
 
-
     // MARK: - Usage
     struct Usage: Codable {
         let promptTokens, completionTokens, totalTokens: Int

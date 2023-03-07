@@ -25,6 +25,7 @@
 		9D47226E29B47489005BD7E1 /* ChatGptMessageItem+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D47226C29B47489005BD7E1 /* ChatGptMessageItem+CoreDataProperties.swift */; };
 		9D47227029B47590005BD7E1 /* ChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D47226F29B47590005BD7E1 /* ChatViewModel.swift */; };
 		9D47227229B4850D005BD7E1 /* ChatGptRole.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D47227129B4850D005BD7E1 /* ChatGptRole.swift */; };
+		9D47227729B6CEB8005BD7E1 /* CoreDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D47227629B6CEB8005BD7E1 /* CoreDataController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +48,7 @@
 		9D47226C29B47489005BD7E1 /* ChatGptMessageItem+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ChatGptMessageItem+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		9D47226F29B47590005BD7E1 /* ChatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewModel.swift; sourceTree = "<group>"; };
 		9D47227129B4850D005BD7E1 /* ChatGptRole.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatGptRole.swift; sourceTree = "<group>"; };
+		9D47227629B6CEB8005BD7E1 /* CoreDataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +130,7 @@
 				9D47226629B471A1005BD7E1 /* ChatGPTResponse.swift */,
 				9D47226029B46BEC005BD7E1 /* ChatGPTController.swift */,
 				9D47227129B4850D005BD7E1 /* ChatGptRole.swift */,
+				9D47227629B6CEB8005BD7E1 /* CoreDataController.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -151,6 +154,7 @@
 				9D47223B29B46764005BD7E1 /* Sources */,
 				9D47223C29B46764005BD7E1 /* Frameworks */,
 				9D47223D29B46764005BD7E1 /* Resources */,
+				9D47227829B6D1AA005BD7E1 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -206,6 +210,26 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		9D47227829B6D1AA005BD7E1 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nexport PATH=\"$PATH:/opt/homebrew/bin\"\n\nif which swiftlint; then\n    swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		9D47223B29B46764005BD7E1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -216,6 +240,7 @@
 				9D47227229B4850D005BD7E1 /* ChatGptRole.swift in Sources */,
 				9D47224C29B46765005BD7E1 /* Persistence.swift in Sources */,
 				9D47226129B46BEC005BD7E1 /* ChatGPTController.swift in Sources */,
+				9D47227729B6CEB8005BD7E1 /* CoreDataController.swift in Sources */,
 				9D47226D29B47489005BD7E1 /* ChatGptMessageItem+CoreDataClass.swift in Sources */,
 				9D47226329B46D3E005BD7E1 /* debug.swift in Sources */,
 				9D47226729B471A1005BD7E1 /* ChatGPTResponse.swift in Sources */,

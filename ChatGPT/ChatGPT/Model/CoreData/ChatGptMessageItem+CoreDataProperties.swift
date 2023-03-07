@@ -9,7 +9,6 @@
 import Foundation
 import CoreData
 
-
 extension ChatGptMessageItem {
 
     @nonobjc public class func fetchRequest() -> NSFetchRequest<ChatGptMessageItem> {
@@ -22,7 +21,7 @@ extension ChatGptMessageItem {
 
 }
 
-extension ChatGptMessageItem : Identifiable {
+extension ChatGptMessageItem: Identifiable {
     public var isUser: Bool {
         let role = ChatGptRole(rawValue: role ?? "") ?? .own
         return role == .own

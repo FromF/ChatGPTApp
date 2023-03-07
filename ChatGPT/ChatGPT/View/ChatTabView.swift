@@ -10,7 +10,7 @@ import SwiftUI
 struct ChatTabView: View {
     @State var selection = 1
     var body: some View {
-        TabView() {
+        TabView {
             ChatView()
                 .tabItem {
                     Label {

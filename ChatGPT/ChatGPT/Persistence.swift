@@ -7,6 +7,7 @@
 
 import CoreData
 
+// swiftlint:disable line_length unused_closure_parameter
 struct PersistenceController {
     static let shared = PersistenceController()
 

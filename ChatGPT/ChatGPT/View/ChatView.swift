@@ -20,7 +20,7 @@ struct ChatView: View {
     
     var body: some View {
         VStack {
-            ScrollViewReader { reader in
+            ScrollViewReader { _ in
                 List {
                     ForEach(0 ..< items.count, id: \.self) { index in
                         let item = items[index]
@@ -55,13 +55,13 @@ struct ChatView: View {
                                 }
                             }
                         }
-                        .padding()
                     if isProgress {
                         Color.gray
                             .frame(height: 40)
                         ProgressView()
                     }
                 } // ZStack
+                .padding()
             } // ScrollViewReader
         }
     }

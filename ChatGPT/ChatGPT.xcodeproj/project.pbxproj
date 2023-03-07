@@ -125,11 +125,11 @@
 			children = (
 				9D47227329B48AC4005BD7E1 /* CoreData */,
 				9D47225E29B46B84005BD7E1 /* keys.swift */,
+				9D47227129B4850D005BD7E1 /* ChatGptRole.swift */,
 				9D47226829B472AF005BD7E1 /* ChatGPTMessage.swift */,
 				9D47226429B46E00005BD7E1 /* ChatGPTRequestParameter.swift */,
 				9D47226629B471A1005BD7E1 /* ChatGPTResponse.swift */,
 				9D47226029B46BEC005BD7E1 /* ChatGPTController.swift */,
-				9D47227129B4850D005BD7E1 /* ChatGptRole.swift */,
 				9D47227629B6CEB8005BD7E1 /* CoreDataController.swift */,
 			);
 			path = Model;

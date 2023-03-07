@@ -9,5 +9,5 @@ import Foundation
 
 enum ChatGptRole: String {
     case own = "user"
-    case ai = "assistant"
+    case assistant = "assistant"
 }
